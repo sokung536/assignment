@@ -1,0 +1,26 @@
+backend
+go run main.go
+
+frontend
+npm start
+
+Apple
+run mysql
+brew services start mysql
+
+พอเข้าหน้า mysql แล้วให้ใช้คำสั่งสร้าง DATABASE
+
+-- สร้างฐานข้อมูลชื่อ users
+CREATE DATABASE users;
+
+-- เลือกใช้งานฐานข้อมูล users
+USE users;
+
+-- สร้างตารางชื่อ users_table พร้อมฟิลด์
+CREATE TABLE users_table (
+    id INT AUTO_INCREMENT PRIMARY KEY, -- ฟิลด์ id เป็นคีย์หลักและเพิ่มค่าอัตโนมัติ
+    name VARCHAR(255) NOT NULL,        -- ฟิลด์ name เป็นข้อความสูงสุด 255 ตัวอักษร และต้องไม่ว่าง
+    username VARCHAR(100) NOT NULL,   -- ฟิลด์ username เป็นข้อความสูงสุด 100 ตัวอักษร และต้องไม่ว่าง
+    password VARCHAR(255) NOT NULL    -- ฟิลด์ password เป็นข้อความสูงสุด 255 ตัวอักษร และต้องไม่ว่าง
+);
+
